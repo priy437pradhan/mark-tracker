@@ -475,13 +475,13 @@ function showStatistics() {
     const uniqueSubjects = [...new Set(marksData.map(entry => entry.subject))].length;
     const uniqueChapters = [...new Set(marksData.map(entry => entry.chapter))].length;
 
-    // Calculate grade distribution
-    const gradeDistribution = {
-        excellent: marksData.filter(entry => entry.percentage >= 90).length,
-        good: marksData.filter(entry => entry.percentage >= 75 && entry.percentage < 90).length,
-        average: marksData.filter(entry => entry.percentage >= 60 && entry.percentage < 75).length,
-        poor: marksData.filter(entry => entry.percentage < 60).length
-    };
+    // // Calculate grade distribution
+    // const gradeDistribution = {
+    //     excellent: marksData.filter(entry => entry.percentage >= 90).length,
+    //     good: marksData.filter(entry => entry.percentage >= 75 && entry.percentage < 90).length,
+    //     average: marksData.filter(entry => entry.percentage >= 60 && entry.percentage < 75).length,
+    //     poor: marksData.filter(entry => entry.percentage < 60).length
+    // };
 
     // Subject-wise performance
     const subjectStats = {};
@@ -522,40 +522,40 @@ function showStatistics() {
         </div>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;">
-            <div class="form-section">
-                <h3>📊 Grade Distribution</h3>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Grade Range</th>
-                            <th>Count</th>
-                            <th>Percentage</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Excellent (90-100%)</td>
-                            <td>${gradeDistribution.excellent}</td>
-                            <td>${((gradeDistribution.excellent / totalTests) * 100).toFixed(1)}%</td>
-                        </tr>
-                        <tr>
-                            <td>Good (75-89%)</td>
-                            <td>${gradeDistribution.good}</td>
-                            <td>${((gradeDistribution.good / totalTests) * 100).toFixed(1)}%</td>
-                        </tr>
-                        <tr>
-                            <td>Average (60-74%)</td>
-                            <td>${gradeDistribution.average}</td>
-                            <td>${((gradeDistribution.average / totalTests) * 100).toFixed(1)}%</td>
-                        </tr>
-                        <tr>
-                            <td>Needs Improvement (<60%)</td>
-                            <td>${gradeDistribution.poor}</td>
-                            <td>${((gradeDistribution.poor / totalTests) * 100).toFixed(1)}%</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            // <div class="form-section">
+            //     <h3>📊 Grade Distribution</h3>
+            //     <table class="data-table">
+            //         <thead>
+            //             <tr>
+            //                 <th>Grade Range</th>
+            //                 <th>Count</th>
+            //                 <th>Percentage</th>
+            //             </tr>
+            //         </thead>
+            //         <tbody>
+            //             <tr>
+            //                 <td>Excellent (90-100%)</td>
+            //                 <td>${gradeDistribution.excellent}</td>
+            //                 <td>${((gradeDistribution.excellent / totalTests) * 100).toFixed(1)}%</td>
+            //             </tr>
+            //             <tr>
+            //                 <td>Good (75-89%)</td>
+            //                 <td>${gradeDistribution.good}</td>
+            //                 <td>${((gradeDistribution.good / totalTests) * 100).toFixed(1)}%</td>
+            //             </tr>
+            //             <tr>
+            //                 <td>Average (60-74%)</td>
+            //                 <td>${gradeDistribution.average}</td>
+            //                 <td>${((gradeDistribution.average / totalTests) * 100).toFixed(1)}%</td>
+            //             </tr>
+            //             <tr>
+            //                 <td>Needs Improvement (<60%)</td>
+            //                 <td>${gradeDistribution.poor}</td>
+            //                 <td>${((gradeDistribution.poor / totalTests) * 100).toFixed(1)}%</td>
+            //             </tr>
+            //         </tbody>
+            //     </table>
+            // </div>
 
             <div class="form-section">
                 <h3>📚 Subject-wise Performance</h3>
